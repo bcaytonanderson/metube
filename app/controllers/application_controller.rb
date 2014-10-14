@@ -6,5 +6,6 @@ class ApplicationController < ActionController::Base
   def index
     @movies = Movie.all
     @shows = Show.all
+    @sounds = Sound.all
   end
 end

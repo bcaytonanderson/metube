@@ -1,0 +1,32 @@
+<!-- <h1>Add a Show to meTube:</h1>
+
+<form action="/shows" method="post">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="show[title]">
+
+  <label for='subtitle'>Subtitle:</label>
+  <input tye='text' id='subtitle' name='show[subtitle]'>
+
+  <label for="video_id">YouTube ID:</label>
+  <input type="text" id="video_id" name="show[video_id]">
+  <input type="text" id="description" name="show[description]">
+  <label for="description">Description:</label>
+
+
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <input type="submit" value="submit">
+</form> -->
+
+<% @prog.errors.messages.each do |col, reasons| %>
+<p><%= col %> <%= reasons.inspect %></p>
+<% end %>
+
+<h3>Add a Show to meTube</h3>
+<%= form_tag('/shows', method: 'POST') do %>
+  Title: <input type='text' value='<%= @prog.title %>' name='show[title]' /><br/>
+  Subtitle: <input type='text' value='<%= @prog.subtitle %>' name='show[subtitle]' /><br/>
+  Video ID:<input type='text' value='<%= @prog.video_id %>' name='show[video_id]' /><br/>
+  Description: <input type='text' value='<%= @prog.description %>' name='show[description]' /></br>
+  <input type='submit' value='submit'/>
+<% end %>

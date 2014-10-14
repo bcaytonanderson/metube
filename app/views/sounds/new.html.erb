@@ -1,0 +1,10 @@
+<% @sound.errors.messages.each do |col, reasons| %>
+<p><%= col %> <%= reasons.inspect %></p>
+<% end %>
+
+<h3>Add a Sound to meTube</h3>
+<%= form_tag('/sounds', method: 'POST') do %>
+  Title: <input type='text' value='<%= @sound.title %>' name='sound[title]' /><br/>
+  Soundcloud URL: <input type='text' value='<%= @sound.soundcloud_url %>' name='sound[soundcloud_url]' /><br/>
+  <input type='submit' value='submit'/>
+<% end %>

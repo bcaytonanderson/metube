@@ -1,0 +1,15 @@
+<%= form_tag('/sounds/#{@sound.id}', method: 'POST') do %>
+
+  <input name="_method" type="hidden" value="put">
+
+  <label for="title">Title:</label>
+  <input type="text" id="title" value='<%= @sound.title %>' name="sound[title]">
+
+  <label for="title">Soundcloud URL:</label>
+  <input type="text" id="soundcloud_url" value='<%= @sound.soundcloud_url %>' name="sound[soundcloud_url]">
+
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <input type="submit" value="submit">
+<% end %>
+  <%= link_to 'Delete Sound',sound_path(@sound.id), :method =>:delete%>

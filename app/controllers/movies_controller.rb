@@ -4,10 +4,46 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
+  def new
+    @mov = Movie.new
+  end
+
+  def create
+    @mov = Movie.new(mov_params)
+    if @mov.save
+      redirect_to "/movies/#{@mov.id}"
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    @mov = Movie.find(params[:id])
+  end
+
+  def update
+    @mov = Movie.find(params[:id])
+    @mov.update(mov_params)
+    redirect_to '/movies/#{@mov.id}'
+  end
+
+  def destroy
+    @mov = Movie.find(params[:id])
+    @mov.destroy
+    redirect_to '/movies'
+  end
+
   def show
     @movie = Movie.find(params["id"])
     @all = Movie.all
-    puts @all
+  end
+
+
+private
+
+  def mov_params
+    # we must explicitly permit the parameters we will allow
+    params.require(:movie).permit(:title, :subtitle, :description, :video_id) 
   end
 end
   # def show_gladiator

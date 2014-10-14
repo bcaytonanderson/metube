@@ -1,0 +1,12 @@
+<% @mov.errors.messages.each do |col, reasons| %>
+<p><%= col %> <%= reasons.inspect %></p>
+<% end %>
+
+<h3>Add a Movie to meTube</h3>
+<%= form_tag('/movies', method: 'POST') do %>
+  Title: <input type='text' value='<%= @mov.title %>' name='movie[title]' /><br/>
+  Subtitle: <input type='text' value='<%= @mov.subtitle %>' name='movie[subtitle]' /><br/>
+  Video ID:<input type='text' value='<%= @mov.video_id %>' name='movie[video_id]' /><br/>
+  Description: <input type='text' value='<%= @mov.description %>' name='movie[description]' /></br>
+  <input type='submit' value='submit'/>
+<% end %>

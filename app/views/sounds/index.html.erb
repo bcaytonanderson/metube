@@ -1,0 +1,12 @@
+<h1>Sounds!</h1>
+
+<ul>
+<% @sounds.each do |x| %>
+  <li>
+    <a href="/sounds/<%= x.id %>"><%= x.title %></a> / <%= link_to 'Edit', [:edit, x] %> / <%= link_to 'Delete',sound_path(x.id), :method =>:delete%>
+  </li>
+<% end %>
+<li>
+<%= link_to 'Add New Sound', '/sounds/new' %>
+</li>
+</ul>

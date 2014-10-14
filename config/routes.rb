@@ -1,16 +1,35 @@
 Rails.application.routes.draw do
 
-  get root to: "application#index"
+  root to:'application#index'
+    resources :movies, :shows, :sounds
 
-  get '/movies/', :to => 'movies#index'
+  # get '/movies/', to:'movies#index'
+  # get '/shows/', to:'shows#index'
 
-  get '/movies/:id', to:'movies#show', as: 'movie'
+  # get '/movies/new', to:'movies#new'
 
-  get '/shows/', :to => 'tv_shows#index'
+  # post '/movies/', to:'movies#create'
 
-  get '/shows/:id', to:'tv_shows#show', as: 'show'
+  # get '/movies/:id', to:'movies#show', as: 'movie'
 
-  post '/shows/create', to: 'tv_shows#create'
+  # get "/movies/:id/edit", to: 'movies#edit'
+
+  # put "/movies/:id", to: 'movies#update'
+
+  # delete '/movies/:id', to: 'movies#destroy'
+
+
+  # get '/shows/new/', to:'tv_shows#new'
+
+  # post '/shows/', to:'tv_shows#create'
+
+  # get '/shows/:id', to:'tv_shows#show', as: 'show'
+
+  # get "/shows/:id/edit", to: 'tv_shows#edit'
+
+  # put "/shows/:id", to: 'tv_shows#update'
+
+  # delete '/shows/:id', to: 'tv_shows#destroy'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

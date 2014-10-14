@@ -1,0 +1,14 @@
+<h1>TV!</h1>
+
+<ul>
+<% @shows.each do |x| %>
+  <li>
+    <a href="/shows/<%= x.id %>"><%= x.title %></a> / <%= link_to 'Edit', [:edit, x] %> / <%= link_to 'Delete',show_path(x.id), :method =>:delete%>
+  </li>
+
+<% end %>
+  <li>
+<%= link_to 'Add New Show', '/shows/new' %>
+</li>
+</ul>
+

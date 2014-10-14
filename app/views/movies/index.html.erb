@@ -3,7 +3,10 @@
 <ul>
 <% @movies.each do |x| %>
   <li>
-    <a href="/movies/<%= x.id %>"><%= x.title %></a>
+    <a href="/movies/<%= x.id %>"><%= x.title %></a> / <%= link_to 'Edit', [:edit, x] %> / <%= link_to 'Delete',movie_path(x.id), :method =>:delete%>
   </li>
 <% end %>
+<li>
+<%= link_to 'Add New Movie', '/movies/new' %>
+</li>
 </ul>

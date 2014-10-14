@@ -11,3 +11,5 @@ Movie.create(title: "Oldboy", description:"The best fight scene ever filmed.", s
 Movie.create(title: "Cube", description:"The first scene in Cube.", subtitle:"Slice and Dice", video_id:"//www.youtube.com/embed/k8Tw4JhzORM")
 Show.create(title: "Seinfeld", description:"This show is pretty boring.", subtitle:"Observational humor done poorly.", video_id:"//www.youtube.com/embed/PaPxSsK6ZQA" )
 Show.create(title: "Friends", description:"This show is lame.", subtitle:"Don't watch this.", video_id:"//www.youtube.com/embed/R5Ty4e2UVME" )
+Sound.create(title: 'Files', soundcloud_url:'https://soundcloud.com/makersquare/files')
+Sound.create(title: 'Sitcom Don', soundcloud_url:'https://soundcloud.com/makersquare/sitcom-don')

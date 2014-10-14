@@ -1,19 +1,37 @@
 <h1>meTube</h1>
 
-<h3>Movies:</h3>
+<h3><%= link_to 'Movies:', '/movies', :method=>:get%></h3>
 <ul>
 <% @movies.each do |x| %>
   <li>
-    <a href="/movies/<%= x.id %>"><%= x.title %></a>
+    <a href="/movies/<%= x.id %>"><%= x.title %></a> / <%= link_to 'Edit', [:edit, x] %> / <%= link_to 'Delete',movie_path(x.id), :method =>:delete%>
   </li>
 <% end %>
+<li>
+<%= link_to 'Add New Movie', '/movies/new' %>
+</li>
 </ul>
 
-<h3>Shows:</h3>
+<h3><%= link_to 'Shows', '/shows', :method=>:get%></h3>
 <ul>
 <% @shows.each do |x| %>
   <li>
-    <a href="/movies/<%= x.id %>"><%= x.title %></a>
+    <a href="/shows/<%= x.id %>"><%= x.title %></a> / <%= link_to 'Edit', [:edit, x] %> / <%= link_to 'Delete',show_path(x.id), :method =>:delete%>
   </li>
 <% end %>
+<li>
+<%= link_to 'Add New Show', '/shows/new' %>
+</li>
+</ul>
+
+<h3><%= link_to 'Sounds', '/sounds'%></h3>
+<ul>
+<% @sounds.each do |x| %>
+  <li>
+    <%= link_to x.title, sound_path(x.id) %> / <%= link_to 'Edit', [:edit, x] %> / <%= link_to 'Delete Sound',sound_path(x.id), :method =>:delete%>
+  </li>
+<% end %>
+<li>
+<%= link_to 'Add New Show', '/sounds/new' %>
+</li>
 </ul>
