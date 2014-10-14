@@ -1,0 +1,16 @@
+<h1>TV!</h1>
+
+<ul>
+<% @shows.each do |x| %>
+  <li>
+    <a href="/shows/<%= x.id %>"><%= x.title %></a>
+  </li>
+<% end %>
+</ul>
+
+<%= form_tag '/shows' do %>
+  <h3>Spawn new show</h3>
+  <input type='text' name='example' />
+  <input type='text' name='puppy[name]' />  <!-- params[puppy] => {'puppy' => {'name' => 'form entry'}} -->
+<% end %>
+

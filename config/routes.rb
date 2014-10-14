@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+
+  get root to: "application#index"
+
+  get '/movies/', :to => 'movies#index'
+
+  get '/movies/:id', to:'movies#show', as: 'movie'
+
+  get '/shows/', :to => 'tv_shows#index'
+
+  get '/shows/:id', to:'tv_shows#show', as: 'show'
+
+  post '/shows/create', to: 'tv_shows#create'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +67,15 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  # get '/movies/gladiator', to:'movies#show_gladiator'
+
+  # get '/movies/matilda', to:'movies#show_matilda'
+
+  # get '/movies/oldboy', to:'movies#show_oldboy'
+
+  # get '/movies/cube', to:'movies#show_cube'
+
+  # get '/shows/seinfeld', to:'tv_shows#show_seinfeld'
+
+  # get '/shows/friends', to:'tv_shows#show_friends'
 end

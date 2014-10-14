@@ -1,0 +1,19 @@
+<h1>meTube</h1>
+
+<h3>Movies:</h3>
+<ul>
+<% @movies.each do |x| %>
+  <li>
+    <a href="/movies/<%= x.id %>"><%= x.title %></a>
+  </li>
+<% end %>
+</ul>
+
+<h3>Shows:</h3>
+<ul>
+<% @shows.each do |x| %>
+  <li>
+    <a href="/movies/<%= x.id %>"><%= x.title %></a>
+  </li>
+<% end %>
+</ul>
