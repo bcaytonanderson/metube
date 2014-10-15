@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014204016) do
+ActiveRecord::Schema.define(version: 20141014223705) do
+
+  create_table "comments", force: true do |t|
+    t.integer  "video_id",   limit: 255
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "movies", force: true do |t|
     t.string   "title"

@@ -42,6 +42,6 @@ private
 
   def sound_params
     # we must explicitly permit the parameters we will allow
-    params.require(:movie).permit(:title, :soundcloud_url) 
+    params.require(:sound).permit(:title, :soundcloud_url) 
   end
 end

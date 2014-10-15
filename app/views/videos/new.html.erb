@@ -1,0 +1,11 @@
+<% @video.errors.messages.each do |col, reasons| %>
+<p><%= col %> <%= reasons.inspect %></p>
+<% end %>
+
+<h3>Add a Video to meTube</h3>
+<%= form_tag('/video', method: 'POST') do %>
+  Title: <input type='text' value='<%= @video.title %>' name='video[title]' /><br/>
+  YouTube ID: <input type='text' value='<%= @video.youtube_id %>' name='video[youtube_id]' /><br/>
+  Description: <input type='text' value='<%= @video.description %>' name='video[description]' /><br/>
+  <input type='submit' value='submit'/>
+<% end %>

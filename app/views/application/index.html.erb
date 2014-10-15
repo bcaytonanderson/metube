@@ -32,6 +32,18 @@
   </li>
 <% end %>
 <li>
-<%= link_to 'Add New Show', '/sounds/new' %>
+<%= link_to 'Add New Sound', '/sounds/new' %>
+</li>
+</ul>
+
+<h3><%= link_to 'Videos', '/videos', :method=>:get%></h3>
+<ul>
+<% @videos.each do |x| %>
+  <li>
+    <a href="/videos/<%= x.id %>"><%= x.title %></a> / <%= link_to 'Edit', [:edit, x] %> / <%= link_to 'Delete',video_path(x.id), :method =>:delete%>
+  </li>
+<% end %>
+<li>
+<%= link_to 'Add New Video', '/videos/new' %>
 </li>
 </ul>

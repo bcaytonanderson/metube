@@ -7,5 +7,6 @@ class ApplicationController < ActionController::Base
     @movies = Movie.all
     @shows = Show.all
     @sounds = Sound.all
+    @videos = Video.all
   end
 end
