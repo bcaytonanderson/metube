@@ -1,15 +1,211 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+.navbar {
+  margin: 0 0 16px 0;
+  text-align: left;
+  display: inline-block;
+}
+.media-container {
+  margin: 0 8px 0 8px;
+  padding: 0;
+}
+.page-container {
+  box-sizing: border-box;
+  display: table-cell;
+  background-color: #d4d3d1;
+  margin: 0;
+  padding: 0px;
+
+}
+.media-box {
+  box-sizing: border-box;
+  width: 420px;
+  height: 353px;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+iframe {
+  box-sizing: border-box;
+  display: table-cell;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  color: white;
+  font-style: normal;
+  margin: 0 auto;
+  text-decoration: none;
+  transition: color 2.5s ease;
+  margin-top: 0;
+}
+ol {
+  float: left;
+  margin: 10px 0 0 0;
+  padding-left: none;
+  width: 420px;
+  box-sizing: border-box;
+  -webkit-padding-start: 0;
+}
+li > h5 {
+  margin: 8px 0 8px 0;
+}
+.button {
+  display: inline;
+  width: 130px;
+  height: 47px;
+
+background-color:#cc001a;
+margin: 0;
+padding: 0px 25px 0px 5px;
+color: white;
+font-size: 40px;
+font-weight: 700;
+border-bottom-right-radius: 400px;
+font-style: normal;
+}
+.navbar-container {
+  display: inline;
+}
+.navbar > .navbar-container p {
+  display: inline-table-cell;
+  margin: 0;
+  padding: 0;
+}
+.nav-ribbon {
+  float: right;
+  display: inline-table;
+  width: 100%;
+}
+.resource-container {
+  text-align: right;
+  float: right;
+  width: 420px;
+  box-sizing: border-box;
+  display: table-cell;
+  border: 0;
+  border-top-left-radius:  5000px;
+  border-top-right-radius: 5px;
+  color: white;
+  background-color:#cc001a;
+  margin: 16px 0px 0px 0px;
+  padding: 0 20px 0px 10px;
+}
+.resource-title {
+  padding: 0;
+  margin: 0 auto;
+  font-weight: 700;
+  border: 0;
+  border-top-right-radius: 5px;
+}
+.desc-box {
+  display: table-cell;
+  width: 420px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 5000px;
+  margin: 0 0 16px 0;
+  padding: 0;
+  background-color: #cc001a;
+}
+.desc-text {
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
+  float: left;
+  margin: 0;
+  padding: 0px 0px 0px 5px;  
+}
+.created {
+  color: white;
+  float: right;
+  margin: 0;
+  padding: 0px 10px 0px 0px;
+  font-weight: 700;  
+}
+.comments {
+  margin-top: 8px;
+  text-align: left;
+}
+.comment-header {
+  display: table-row;
+  background-color: #776a63;
+  padding: 2px;
+  margin: 16px 0 0 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+.comment-title {
+  box-sizing: border-box;
+  border: 3px solid #776a63; ;
+  display: table-cell;
+  color: white;
+  /*text-align: center;*/
+  background-color: #776a63;
+  margin: 0 auto;  
+  padding: 0 3px 0 8px;
+}
+.comment-title:first-child {
+  border-top-left-radius: 10px;
+  padding: 0 3px 0 20px;
+}
+
+.comment-title:nth-child(2) {
+  border-top-right-radius: 10px;
+}
+.filler {
+  padding: 0;
+  margin: 0;
+  border-left: #776a63
+}
+
+.comment-box {
+  width: 420px;
+  vertical-align: top;
+  height: 100px;
+  background-color: #eeeeee;
+  box-sizing: border-box;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: -1px;
+  border: 3px solid #776a63;
+  padding: 0 5px 0 5px;
+
+}
+comment-box:focus, input:focus {
+  outline: 0;
+}
+.comment-submit {
+  box-sizing: border-box;
+  background-color: #776a63;
+  display: table-cell;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  border: 0;
+  border-left: 1px solid #d4d3d1;
+  border-top-right-radius: 10px;
+  padding: 0 5px 0 8px;
+  font-weight: 700;
+  font-family: serif;
+  color: white;
+  
+/*  color: white;
+  background-color: #cc001a;
+  padding: 0px 5px 5px 10px;
+  border: 0;
+  border-bottom-left-radius: 5000px; */ 
+}
+.comment {
+  border-top: 1px solid #999;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+}
+/*.comment:first-child {
+  border: none;
+}*/
